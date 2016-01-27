@@ -34,18 +34,4 @@ def polka_notation(text):
         if result is not None:
             operands.append(result)
         else:
-            raise ValueError()
-
-
-def test_polka_notation():
-    assert polka_notation("5 8 3 + *") == 55, 'Test failed'
-    assert polka_notation("5 3 18 / *") == 30, 'Test failed'
-    assert polka_notation("5 5 11 10 * / *") == 110, 'Test failed'
-    try:
-        polka_notation("0 8 3 + /") == 0, 'Test failed'
-    except ValueError:
-        print("Division by 0")
- 
-
-if __name__ == "__main__":
-    test_polka_notation()
+            raise ZeroDivisionError()
